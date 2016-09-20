@@ -18,6 +18,7 @@ There is also a small amount of test data in the file **/resources/scrumble_test
 * list owners. TODO: ...
 * list statuses. TODO: ...
 * list tasks. TODO: ...
+* Structure to support many other commands that aren't currently implemented.  (See in-app Help for more info.)
 
 # Main potential directions of improvement
 
@@ -31,8 +32,9 @@ There is also a small amount of test data in the file **/resources/scrumble_test
 
 ## Other changes
 * Execute SQL commands in a separate thread from the UI.
-* Improve test data (see **/resources/scrumble_test_data.sql**)
+* Improve test data (see **/resources/scrumble_test_data.sql**).
 * Adopt one or more tools to modify the design of service calls or data binding.
   * afterburner.fx: An MVP framework that uses annotations to @Inject data, per JSR 330.
   * DataFX: Package to facilitate multiple aspects of retrieving, formatting, and editing of data. Several tutorials are available.
   * Guice: Another way to @Inject data dependencies, by Google.
+
