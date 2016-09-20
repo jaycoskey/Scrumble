@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane
+    xmlns:fx="http://javafx.com/fxml/1"
+    xmlns="http://javafx.com/javafx/8.0.65"
+    fx:controller="scrumble.ScrumbleGuiController"
+>
+    <top>
+        <MenuBar fx:id="menuBar"/>
+    </top>
+    <center>
+        <VBox fx:id="vBox"
+              minWidth="870.0" maxWidth="870.0"
+              minHeight="620.0" maxHeight="620"
+              spacing="10"
+              >
+            <children>
+                <HBox fx:id="userCmdHbox" alignment="CENTER_LEFT"
+                      minWidth="700.0" maxWidth="700.0" prefWidth="700.0"
+                      prefHeight="150.0" spacing="10" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="userCmdInputLabel" text="Command:" minWidth="60.0" maxWidth="60.0" />
+                        <TextArea fx:id="userCmdInput" minWidth="550.0" maxWidth="550.0" />
+                        <Button fx:id="userCmdExecuteBtn" text="Execute!" minWidth="120.0" maxWidth="80.0" />
+                        <Button fx:id="userCmdHelpBtn" text="?" minWidth="40.0" maxWidth="40.0" />
+                    </children>
+                </HBox>
+                <HBox fx:id="sqlCmdHbox" alignment="CENTER_LEFT"
+                      minWidth="700.0" maxWidth="700.0"
+                      prefHeight="150.0" spacing="10" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="sqlCmdLabel" text="SQL:" minWidth="60.0" maxWidth="60.0" />
+                        <TextArea fx:id="sqlCmdText" minWidth="550.0" maxWidth="550.0" minHeight="175.0" maxHeight="175.0" editable="false" />
+                        <TextArea fx:id="demoCmdText" minWidth="170.0" maxWidth="170.0" minHeight="125.0" maxHeight="125.0"
+                            text="Sample commands:&#10;* list features&#10;* list tasks&#10;* list owners&#10;* list statuses"
+                            editable="false" />
+                    </children>
+                </HBox>
+                <HBox fx:id="userStatusHbox" alignment="CENTER_LEFT"
+                      minWidth="740.0" maxWidth="740.0"
+                      prefHeight="150.0" spacing="10" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="userCmdStatusLabel" text="Status:" minWidth="60.0" maxWidth="60.0" />
+                        <TextField fx:id="userCmdStatusDisplay" editable="false" minWidth="550.0" maxWidth="550.0" />
+                        <Button fx:id="dbConnectBtn" text="Enter Connection Parameters" minWidth="170.0" maxWidth="170.0" />
+                    </children>
+                </HBox>
+                <Separator fx:id="hRule" orientation="HORIZONTAL" />
+                <StackPane fx:id="lowerPane" />
+            </children>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@scrumble_gui.css" />
+    </stylesheets>
+</BorderPane>

@@ -1,0 +1,19 @@
+#demoCmdText .content {
+    -fx-background-color: lightcyan;
+}
+
+.user_cmd_entry_failure {
+    -fx-text-inner-color: red;
+}
+.user_cmd_entry_success {
+    -fx-text-inner-color: black;
+}
+
+#vBox {
+    -fx-padding: 10;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: blue;
+}

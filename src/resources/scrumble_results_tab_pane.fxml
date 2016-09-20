@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+
+<TabPane fx:id="resultsTabPane" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="scrumble.ResultsTabPaneController" >
+    <tabs>
+        <Tab fx:id="featuresTab" text="Features">
+            <content>
+                <TableView fx:id="featuresTable" minHeight="300.0" />
+            </content>
+        </Tab>
+        <Tab fx:id="tasksTab" text="Tasks">
+            <content>
+                <TableView fx:id="tasksTable" minHeight="300.0" />
+            </content>
+        </Tab>
+        <Tab fx:id="ownersTab" text="Item Owners">
+            <content>
+                <TableView fx:id="ownersTable" minHeight="300.0" />
+            </content>
+        </Tab>
+        <Tab fx:id="statusesTab" text="Item Statuses">
+            <content>
+                <TableView fx:id="statusesTable" minHeight="300.0" />
+            </content>
+        </Tab>
+        <Tab fx:id="burndownTab" text="Burndown"/>
+    </tabs>
+</TabPane>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Scrumble: A POC Scrum-tracking app</title>
+    </head>
+    <body>
+        <h1>Scrumble overview</h1>
+            Scrumble is a proof-of-concept Scrum-tracking app.
+            It is not intended to be full-featured, but could be useful to someone learning JavaFX.
+            It is written in JavaFX,
+            and incorporates parsing of user-entered commands with database calls
+            and tabular display of the resulting data.
+
+        <h1>Getting started</h1>
+            Scrumble is written in JavaFX using NetBeans.
+            To run properly, it requires a database to first be set up with certain tables.
+            The DDL for these tables can be found in /resources/scrumble_ddl.sql.
+            <br/><br/>
+            There is also a small amount of test data in the file /resources/scrumble_test_data.sql.
+            
+        <h1>Scrumble commands</h1>
+        (Commands that are not yet supported are <strike>struck out</strike>.)
+        <ul>
+%%COMMANDS%%
+        </ul>
+
+        <h1>Main potential directions of improvement</h1>
+        <h2> Functionality changes</h2>
+        <ul>
+            <li> Completion of currently unsupported commands. </li>
+            <li> Support for charts&mdash;primarily burndown charts. </li>
+            <li> Support for editing data directly in the displayed tables. </li>
+            <li> Add a back button to the Help window. </li>
+            <li> Formation of a programmatic interface, using REST.
+                <ul>
+                    <li> URL components could be derived from the "signature" field in UserCmdTypeInfo. </li>
+                </ul>
+            </li>
+        </ul>
+        <h2> Other changes</h2>
+        <ul>
+            <li> Execute SQL commands in a separate thread from the UI.
+            <li> Improve test data (see /resources/scrumble_test_data.sql) </li>
+            <li> Adopt one or more tools to modify the design of service calls or data binding.
+                <ul>
+                    <li> <a href="http://afterburner.adam-bien.com/">afterburner.fx</a>:
+                        An MVP framework that uses annotations to @Inject data,
+                        per <a href="https://jcp.org/en/jsr/detail?id=330">JSR 330</a>.
+                    </li>
+                    <li> <a href="http://www.javafxdata.org/">DataFX</a>:
+                        Package to facilitate multiple aspects of retrieving, formatting, and editing of data.
+                        Several <a href="http://www.guigarage.com/2014/05/datafx-8-0-tutorials/">tutorials</a>
+                        are available.
+                    </li>
+                    <li> <a href="https://en.wikipedia.org/wiki/Google_Guice">Guice</a>:
+                        Another way to @Inject data dependencies, by Google.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
